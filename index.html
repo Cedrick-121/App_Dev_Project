@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STI Registrar Online — Requirements & Appointments</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- =========================================================
+     LOGIN VIEW
+     ========================================================= -->
+<div id="view-login" class="view active">
+  <div class="login-shell">
+
+    <div class="login-bg"></div>
+
+    <div class="hero-topbar">
+      <div class="hero-mark">S</div>
+      <div class="hero-brand">STI Registrar Online<span>College Global City</span></div>
+    </div>
+
+    <div class="hero-copy">
+      <h1>Get your documents without the line.</h1>
+      <p>Request transcripts, Form 138, good moral certificates and scholarship requirements — then pick your own pickup time.</p>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat"><b>4</b><span>document types online</span></div>
+      <div class="hero-stat"><b>&lt;5min</b><span>to book a slot</span></div>
+      <div class="hero-stat"><b>0</b><span>time in line</span></div>
+    </div>
+
+    <div class="login-copyright">© STI Education Services Group — Registrar Portal</div>
+
+    <div class="login-card-wrap">
+      <div class="login-card">
+        <div class="kicker">Student sign in</div>
+        <h2>Welcome back</h2>
+        <p class="sub">Sign in with your school Office 365 account to request documents and book a pickup appointment.</p>
+
+        <button class="btn btn-office btn-block" id="btnOffice">
+          <svg width="17" height="17" viewBox="0 0 23 23"><path fill="#f35325" d="M1 1h10v10H1z"/><path fill="#81bc06" d="M12 1h10v10H12z"/><path fill="#05a6f0" d="M1 12h10v10H1z"/><path fill="#ffba08" d="M12 12h10v10H12z"/></svg>
+          <span id="officeLabel">Continue with Office 365</span>
+        </button>
+
+        <div class="divider-row"><div class="line"></div><span>or use student number</span><div class="line"></div></div>
+
+        <div class="id-field">
+          <label for="sid">Student number</label>
+          <input id="sid" type="text" placeholder="e.g. 02000123456" value="02000198231">
+        </div>
+        <div class="id-field">
+          <label for="spass">Password</label>
+          <input id="spass" type="password" placeholder="••••••••" value="••••••••">
+        </div>
+
+        <button class="btn btn-teal btn-block" id="btnLogin" style="margin-top:6px;">
+          <span id="loginLabel">Log in</span>
+        </button>
+
+        <div class="login-foot">
+          Trouble signing in? Contact the <a href="#">Campus Helpdesk</a> — this is a front-end preview, no real account is required.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =========================================================
+     APP VIEW (dashboard shell)
+     ========================================================= -->
+<div id="view-app" class="view">
+  <div class="app-shell">
+
+    <div class="sidebar">
+      <div class="side-mark">S</div>
+      <button class="side-btn active" data-page="home" title="Home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>
+      </button>
+      <button class="side-btn" data-page="requirements" title="Requirements">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h8l5 5v13H7z"/><path d="M15 3v5h5"/><path d="M9 13h6M9 17h6"/></svg>
+      </button>
+      <button class="side-btn" data-page="appointments" title="Appointments">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+        <span class="dot" id="apptDot" style="display:none;"></span>
+      </button>
+      <div class="side-spacer"></div>
+      <div class="side-avatar">CA</div>
+    </div>
+
+    <div class="main-col">
+      <div class="topbar">
+        <div class="topbar-title" id="topbarTitle">Home / <b>Overview</b></div>
+        <div class="topbar-right">
+          <button class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></button>
+          <div class="who">
+            <div class="who-avatar">CA</div>
+            <div>
+              <div class="name">Cedrick Abad</div>
+              <div class="role">BSIT · College Global City</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------------- PAGE: HOME ---------------- -->
+      <div class="page-sub active" id="page-home">
+        <div class="page">
+          <div class="greet">
+            <h1>Hi, Cedrick 👋</h1>
+            <p>Here's what's happening with your document requests.</p>
+          </div>
+
+          <div class="queue-banner">
+            <div class="qb-text">
+              <h3>No more falling in line at the Registrar</h3>
+              <p>Request your documents online, then book the exact date and time you'll pick them up — within the Registrar's open period.</p>
+            </div>
+            <button class="btn btn-yellow qb-cta" onclick="goPage('requirements')">Request documents</button>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat-card"><div class="n" id="statAvailable">4</div><div class="l">document types available online</div></div>
+            <div class="stat-card"><div class="n" id="statPending">0</div><div class="l">requests awaiting pickup</div></div>
+            <div class="stat-card"><div class="n">Sept 25</div><div class="l">last day to book this term</div></div>
+          </div>
+
+          <div class="section-head">
+            <h2>Your upcoming appointment</h2>
+            <a href="#" onclick="goPage('appointments');return false;">View all</a>
+          </div>
+          <div id="homeApptSlot"></div>
+        </div>
+      </div>
+
+      <!-- ---------------- PAGE: REQUIREMENTS ---------------- -->
+      <div class="page-sub" id="page-requirements">
+        <div class="page">
+          <div class="page-head">
+            <div>
+              <h1>Document requirements</h1>
+              <p>Select everything you need to pick up. You'll book one appointment for all of them — no need to request them one at a time.</p>
+            </div>
+          </div>
+
+          <div class="cashier-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+            <div>Items that require payment (e.g. Certificate of Enrollment with fee, diploma copies) are still processed at the Cashier's window and aren't listed here.</div>
+          </div>
+
+          <div class="req-group">
+            <div class="req-group-label">Academic records</div>
+            <div class="req-grid" id="grid-academic"></div>
+          </div>
+
+          <div class="req-group">
+            <div class="req-group-label">Character &amp; standing</div>
+            <div class="req-grid" id="grid-character"></div>
+          </div>
+
+          <div class="req-group">
+            <div class="req-group-label">Scholarship requirements</div>
+            <div class="req-grid" id="grid-scholarship"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------------- PAGE: BOOKING ---------------- -->
+      <div class="page-sub" id="page-booking">
+        <div class="page">
+          <div class="page-head">
+            <div>
+              <h1>Book your pickup</h1>
+              <p>Pick a date and time within the Registrar's open period. Bring your school ID when you arrive.</p>
+            </div>
+          </div>
+
+          <div class="booking-grid">
+            <div class="panel">
+              <div class="cal-head">
+                <div class="cal-month" id="calMonthLabel">September 2026</div>
+                <div class="cal-nav">
+                  <button id="calPrev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 18l-6-6 6-6"/></svg></button>
+                  <button id="calNext"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 18l6-6-6-6"/></svg></button>
+                </div>
+              </div>
+              <div class="cal-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+              <div class="cal-grid" id="calGrid"></div>
+              <div class="cal-legend">
+                <span><i style="background:var(--bg);border:1px solid var(--border);"></i>Open</span>
+                <span><i style="background:var(--teal);"></i>Selected</span>
+                <span><i style="background:#fff;border:1px solid var(--border);"></i>Closed / past</span>
+              </div>
+
+              <div class="slot-wrap">
+                <h3 style="margin-bottom:10px;">Available time</h3>
+                <div class="hint" id="slotHint">Pick a date to see open time slots.</div>
+                <div class="slot-grid" id="slotGrid"></div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <h3>Your request</h3>
+              <div class="summary-list" id="bookingSummary"></div>
+              <div class="summary-divider"></div>
+              <div class="summary-row"><span>Date</span><b id="sumDate">—</b></div>
+              <div class="summary-row"><span>Time</span><b id="sumTime">—</b></div>
+              <div class="summary-row"><span>Pickup location</span><b>Registrar Window 2</b></div>
+              <button class="btn btn-teal btn-block" id="btnConfirmBooking" style="margin-top:16px;" disabled>Confirm appointment</button>
+              <button class="btn btn-ghost btn-block" onclick="goPage('requirements')" style="margin-top:4px;">← Edit selected documents</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------------- PAGE: CONFIRMATION ---------------- -->
+      <div class="page-sub" id="page-confirm">
+        <div class="page">
+          <div class="confirm-wrap">
+            <div class="confirm-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <h2>Appointment booked</h2>
+            <p>Save your reference number. Show it at Registrar Window 2 on your appointment date — no need to line up beforehand.</p>
+
+            <div class="ticket">
+              <div class="ticket-row"><span class="l">Reference no.</span><span class="ref-code" id="tkRef">STI-2026-00000</span></div>
+              <div class="ticket-row"><span class="l">Student</span><span class="r">Cedrick Abad · 02000198231</span></div>
+              <div class="ticket-row"><span class="l">Date</span><span class="r" id="tkDate">—</span></div>
+              <div class="ticket-row"><span class="l">Time</span><span class="r" id="tkTime">—</span></div>
+              <div class="ticket-row"><span class="l">Documents</span><span class="r" id="tkDocs">—</span></div>
+              <div class="ticket-row"><span class="l">Pickup at</span><span class="r">Registrar Window 2, Ground Flr.</span></div>
+            </div>
+
+            <div class="confirm-actions">
+              <button class="btn btn-office" onclick="goPage('appointments')">View my appointments</button>
+              <button class="btn btn-teal" onclick="goPage('home')">Back to home</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------------- PAGE: MY APPOINTMENTS ---------------- -->
+      <div class="page-sub" id="page-appointments">
+        <div class="page">
+          <div class="page-head">
+            <div>
+              <h1>My appointments</h1>
+              <p>Every pickup you've booked with the Registrar this term.</p>
+            </div>
+          </div>
+          <div class="appt-list" id="apptListFull"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
