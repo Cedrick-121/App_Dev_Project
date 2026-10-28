@@ -1,0 +1,9 @@
+data/
+dist/
+node_modules/
+.git/
+*.db
+*.db-wal
+*.db-shm
+start.bat
+start.sh
